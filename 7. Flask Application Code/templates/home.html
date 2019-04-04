@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Home</title>
+	<style>
+table{
+        font-family:"Georgia",serif;
+        height: 500px;
+        width: 300px;
+		}
+
+
+.container{
+        width:100%;
+        margin: auto;
+        overflow: hidden;
+}
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.drp{
+font-size: 14px;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+body {
+  background-image: url('./background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+	</style>
+</head>
+<html>
+<body style = "border: 2px solid black;width: 25%;margin-top: 5%;margin-left: 5%; background-repeat: no-repeat,">
+<form action="{{ url_for('predict')}}" method="POST">
+    <div class="abc">
+	<header>
+    <div class="container" align="center">
+			<h2>Bike Rental Predictions </h2>
+	</div>
+    </header>
+
+    <table align="center">
+      <th></th>
+        <tr>
+            <td>Humidity</td>
+            <td><input class = "field" type="number" name="humidity" min="0" max="999" required></td>
+        </tr>
+        <tr>
+            <td>Feels Like Temperature</td>
+            <td><input type="number" name="aTemp" min="0" max="999" required></td>
+        </tr>
+        <tr>
+            <td>Working Day</td>
+            <td><select name="workDay" class ="drp" required>
+                <option value="1">Yes</option>
+		        <option value="0">No</option>
+		        </select></td>
+        </tr>
+        <tr>
+            <td>Year</td>
+            <td><select name="year" class ="drp" required>
+		        <option value="2011">2011</option>
+		        <option value="2012">2012</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td>Month</td>
+            <td><select name="month" class ="drp" required>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+            </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Hour</td>
+            <td><input type="number" name="hour" min="0" max="23" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Weather</td>
+            <td><select name="weather" class ="drp" required>
+		        <option value="1">Clear</option>
+		        <option value="2">Mist</option>
+		        <option value="3">Light Snow</option>
+		        <option value="4">Heavy Rain</option>
+		        </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Season</td>
+            <td><select name="season" class ="drp" required>
+            <option value="1">Spring</option>
+            <option value="2">Summer</option>
+            <option value="3">Fall</option>
+            <option value="4">Winter</option>
+            </select>
+            </td>
+        </tr>
+
+    </table>
+    <br>
+<div align="center">
+<input type="submit" class="btn-info" value="predict" align="center">
+</div><br>
+</div>
+</form>
+
+</body>
+</html>
