@@ -6,7 +6,7 @@ We also developed a simple front end Flask Application which can be used by the 
 
 Highlights: 
 
-We employed GridSearchCV to get the best hyperparameters for our algorithm
-We used AutoML technologies like BigML and H2O AI to come up with best models for prediction
-We deployed the application on Azure cloud as well
+We employed GridSearchCV to get the best hyperparameters for our algorithm.
+We used AutoML technologies like BigML and H2O AI to come up with best models for prediction.
+We deployed the application on Azure cloud.
 Check out DharitShah13.github.io for documentation.(Google Claat)
